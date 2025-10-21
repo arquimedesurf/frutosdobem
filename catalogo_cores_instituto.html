@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade Visual - Instituto Frutos do Bem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #3D4246;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            color: #3D4246;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            color: #3D4246;
+            margin-bottom: 30px;
+            font-weight: 600;
+            border-left: 5px solid #F4C542;
+            padding-left: 20px;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .color-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .color-sample {
+            height: 180px;
+            width: 100%;
+        }
+        
+        .color-info {
+            padding: 25px;
+        }
+        
+        .color-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D4246;
+            margin-bottom: 15px;
+        }
+        
+        .color-values {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .color-value {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            padding: 8px 12px;
+            background: #f8f8f8;
+            border-radius: 6px;
+        }
+        
+        .color-label {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .color-code {
+            font-family: 'Courier New', monospace;
+            color: #333;
+            background: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .usage-section {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .usage-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D4246;
+            margin-bottom: 15px;
+        }
+        
+        .usage-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .combinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .combo-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .combo-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #3D4246;
+            margin-bottom: 12px;
+        }
+        
+        .combo-colors {
+            display: flex;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .combo-color {
+            flex: 1;
+        }
+        
+        .logo-preview {
+            text-align: center;
+            padding: 40px;
+            background: #3D4246;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>IDENTIDADE VISUAL</h1>
+            <p>Instituto Frutos do Bem - Paleta de Cores</p>
+        </div>
+        
+        <div class="logo-preview">
+            <img src="logo.jpeg">
+            <p class="logo-text">Logo sobre fundo principal</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cores Principais</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #3D4246;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Cinza Institucional</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#3D4246</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">61, 66, 70</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">13, 6, 0, 73</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #FEFEFE;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Branco Puro</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#FEFEFE</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">254, 254, 254</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">0, 0, 0, 0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-section">
+                <div class="usage-title">Uso das Cores Principais</div>
+                <p class="usage-text">
+                    <strong>Cinza Institucional (#3D4246):</strong> Cor principal para fundos, cabeçalhos e elementos de destaque. Transmite seriedade, profissionalismo e solidez.<br><br>
+                    <strong>Branco Puro (#FEFEFE):</strong> Utilizado para logotipo, textos sobre fundos escuros e áreas de respiro visual. Representa pureza, clareza e transparência.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cores dos Frutos - Diversidade</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #F4C542 0%, #E0A82E 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dourado Luminoso</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#F4C542</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">244, 197, 66</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">0, 19, 73, 4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #68B5A1 0%, #4E9B8A 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Turquesa Vibrante</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#68B5A1</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">104, 181, 161</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">43, 0, 11, 29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #8FBF7E 0%, #73A164 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Esperança</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#8FBF7E</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">143, 191, 126</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">25, 0, 34, 25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #A8B090 0%, #8E9677 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Sálvia</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#A8B090</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">168, 176, 144</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">5, 0, 18, 31</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #B5A085 0%, #9B8670 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Terra Fértil</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#B5A085</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">181, 160, 133</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">0, 12, 27, 29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #A08978 0%, #8A7464 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Marrom Natural</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#A08978</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">160, 137, 120</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">0, 14, 25, 37</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #86AC80 0%, #6D916A 100%);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Crescimento</div>
+                        <div class="color-values">
+                            <div class="color-value">
+                                <span class="color-label">HEX</span>
+                                <span class="color-code">#86AC80</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">RGB</span>
+                                <span class="color-code">134, 172, 128</span>
+                            </div>
+                            <div class="color-value">
+                                <span class="color-label">CMYK</span>
+                                <span class="color-code">22, 0, 26, 33</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-section">
+                <div class="usage-title">Significado das Cores dos Frutos</div>
+                <p class="usage-text">
+                    Cada cor representa uma área de desenvolvimento no Instituto:<br><br>
+                    <strong>Dourado Luminoso:</strong> Excelência, conquistas e valores espirituais<br>
+                    <strong>Turquesa Vibrante:</strong> Saúde física e bem-estar<br>
+                    <strong>Verde Esperança:</strong> Crescimento pessoal e renovação<br>
+                    <strong>Verde Sálvia:</strong> Equilíbrio e harmonia<br>
+                    <strong>Terra Fértil:</strong> Base sólida e conexão com a natureza<br>
+                    <strong>Marrom Natural:</strong> Trabalho em equipe e comunidade<br>
+                    <strong>Verde Crescimento:</strong> Desenvolvimento contínuo e sustentabilidade
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Combinações Recomendadas</h2>
+            <div class="combinations">
+                <div class="combo-card">
+                    <div class="combo-title">Principal Institucional</div>
+                    <div class="combo-colors">
+                        <div class="combo-color" style="background: #3D4246;"></div>
+                        <div class="combo-color" style="background: #FEFEFE;"></div>
+                        <div class="combo-color" style="background: #F4C542;"></div>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-title">Natureza e Crescimento</div>
+                    <div class="combo-colors">
+                        <div class="combo-color" style="background: #68B5A1;"></div>
+                        <div class="combo-color" style="background: #8FBF7E;"></div>
+                        <div class="combo-color" style="background: #86AC80;"></div>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-title">Terra e Raízes</div>
+                    <div class="combo-colors">
+                        <div class="combo-color" style="background: #B5A085;"></div>
+                        <div class="combo-color" style="background: #A08978;"></div>
+                        <div class="combo-color" style="background: #A8B090;"></div>
+                    </div>
+                </div>
+                
+                <div class="combo-card">
+                    <div class="combo-title">Destaque e Energia</div>
+                    <div class="combo-colors">
+                        <div class="combo-color" style="background: #F4C542;"></div>
+                        <div class="combo-color" style="background: #3D4246;"></div>
+                        <div class="combo-color" style="background: #68B5A1;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="usage-section" style="margin-top: 40px;">
+            <div class="usage-title">Diretrizes de Aplicação</div>
+            <p class="usage-text">
+                <strong>Fundos e Backgrounds:</strong> Priorize o Cinza Institucional (#3D4246) ou Branco Puro (#FEFEFE)<br><br>
+                <strong>Destaques e CTAs:</strong> Use o Dourado Luminoso (#F4C542) para botões e chamadas de ação<br><br>
+                <strong>Elementos Secundários:</strong> As cores dos frutos devem ser usadas para ícones, ilustrações e elementos gráficos de apoio<br><br>
+                <strong>Textos:</strong> Sobre fundos claros use o Cinza Institucional; sobre fundos escuros use o Branco Puro<br><br>
+                <strong>Diversidade Visual:</strong> Em materiais que necessitem representar a diversidade do Instituto, utilize múltiplas cores dos frutos de forma harmoniosa
+            </p>
+        </div>
+    </div>
+</body>
+</html>
