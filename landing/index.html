@@ -1,18 +1,25 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Instituto Frutos do Bem</title>
-  <meta name="description" content="Transformando e potencializando vidas através do esporte e de valores cristãos." />
+  <meta name="description" content="Projeto social esportivo que transforma e potencializa vidas de crianças e jovens no Serviluz, em Fortaleza, por meio do esporte e de princípios cristãos." />
   <meta property="og:title" content="Instituto Frutos do Bem" />
-  <meta property="og:description" content="Transformando e potencializando vidas através do esporte e de valores cristãos." />
-  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:description" content="Transformando e potencializando vidas através do esporte." />
+  <meta property="og:image" content="og.jpg" />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Tailwind via CDN -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Instituto Frutos do Bem" />
+  <meta property="twitter:description" content="Projeto social que acolhe crianças e adolescentes com esporte, fé e propósito." />
+  <meta property="twitter:image" content="og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,12 +27,12 @@
         extend: {
           colors: {
             charcoal: '#2E2F33',
-            deep: '#2F5E4E',
+            deepgreen: '#2F5E4E',
             mango: '#E0A431',
             teal: '#3DAA97',
             olive: '#A1B56C',
             sage: '#B0C19E',
-            terra: '#B98968',
+            terracotta: '#B98968',
             aqua: '#8DC3B0'
           },
           fontFamily: {
@@ -37,175 +44,259 @@
     }
   </script>
   <style>
-    :root{ --space: clamp(16px, 3vw, 24px); }
-    .btn{ @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium transition; }
-    .btn-primary{ @apply bg-mango text-charcoal hover:brightness-95; }
-    .btn-ghost{ @apply border border-white/30 text-white hover:bg-white/10; }
-    .container{ max-width: 1100px; }
+    ::selection { background: #E0A431; color: #2E2F33; }
+    .backdrop-blur-md { backdrop-filter: blur(18px); }
   </style>
 </head>
-<body class="font-body text-charcoal antialiased">
+<body class="font-body text-charcoal bg-white antialiased">
+  <a href="#conteudo-principal" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:rounded-lg focus:bg-mango focus:px-4 focus:py-2 focus:text-charcoal">Pular para o conteúdo principal</a>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-charcoal/90 backdrop-blur text-white">
-    <div class="mx-auto container px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-3">
-        <img src="assets/logo-clara.svg" alt="Instituto Frutos do Bem" class="h-9 w-auto" />
-        <span class="hidden sm:block font-display font-extrabold tracking-wide">Frutos do Bem</span>
+  <header class="sticky top-0 z-40 bg-charcoal/90 text-white backdrop-blur-md">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
+      <a href="#topo" class="flex items-center gap-3" aria-label="Página inicial">
+        <img src="assets/logo.jpg" alt="Logo do Instituto Frutos do Bem" class="h-10 w-auto rounded-lg border border-white/10 bg-white/5 p-1 shadow" />
+        <span class="hidden text-lg font-display font-extrabold tracking-wide md:inline">Instituto Frutos do Bem</span>
       </a>
-      <nav class="hidden md:flex gap-6">
-        <a class="hover:opacity-80" href="#quem-somos">Quem somos</a>
-        <a class="hover:opacity-80" href="#mis-vis-val">Missão &amp; Valores</a>
-        <a class="hover:opacity-80" href="#modalidades">Modalidades</a>
-        <a class="hover:opacity-80" href="#equipe">Equipe</a>
-        <a class="hover:opacity-80" href="#contato">Contato</a>
+      <nav class="hidden items-center gap-6 text-sm font-medium md:flex" aria-label="Navegação principal">
+        <a class="transition hover:text-mango" href="#quem-somos">Quem somos</a>
+        <a class="transition hover:text-mango" href="#mis-vis-valores">Missão</a>
+        <a class="transition hover:text-mango" href="#modalidades">Modalidades</a>
+        <a class="transition hover:text-mango" href="#equipe">Equipe</a>
+        <a class="transition hover:text-mango" href="#contato">Contato</a>
       </nav>
-      <a href="https://wa.me/558597410298" target="_blank" class="btn btn-primary text-sm">Seja voluntário(a)</a>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/558597410298" target="_blank" rel="noopener" class="hidden rounded-full bg-mango px-5 py-2 text-sm font-semibold text-charcoal transition hover:brightness-95 md:inline-flex">Seja voluntário(a)</a>
+        <button type="button" class="inline-flex items-center justify-center rounded-full border border-white/30 p-2 text-white transition hover:bg-white/10 md:hidden" aria-label="Abrir navegação" onclick="document.getElementById('menu-mobile').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" /></svg>
+        </button>
+      </div>
     </div>
+    <nav id="menu-mobile" class="hidden border-t border-white/10 bg-charcoal/95 px-4 pb-4 pt-2 text-sm font-medium md:hidden" aria-label="Navegação móvel">
+      <a class="block rounded-lg px-3 py-2 transition hover:bg-white/10" href="#quem-somos">Quem somos</a>
+      <a class="block rounded-lg px-3 py-2 transition hover:bg-white/10" href="#mis-vis-valores">Missão</a>
+      <a class="block rounded-lg px-3 py-2 transition hover:bg-white/10" href="#modalidades">Modalidades</a>
+      <a class="block rounded-lg px-3 py-2 transition hover:bg-white/10" href="#equipe">Equipe</a>
+      <a class="block rounded-lg px-3 py-2 transition hover:bg-white/10" href="#contato">Contato</a>
+      <a class="mt-3 inline-flex w-full items-center justify-center rounded-full bg-mango px-4 py-2 text-charcoal transition hover:brightness-95" href="https://wa.me/558597410298" target="_blank" rel="noopener">Seja voluntário(a)</a>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="top" class="relative overflow-hidden bg-charcoal text-white">
-    <div class="mx-auto container px-4 py-24 lg:py-32 grid md:grid-cols-2 items-center gap-10">
-      <div>
-        <h1 class="font-display text-4xl/tight sm:text-5xl font-extrabold">Transformando e potencializando vidas através do esporte</h1>
-        <p class="mt-5 text-white/80">Projeto social esportivo cristão que forma atletas e cidadãos, com atividades para crianças, adolescentes e jovens em Fortaleza/CE.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://wa.me/558597410298" target="_blank" class="btn btn-primary">Seja voluntário(a)</a>
-          <a href="#quem-somos" class="btn btn-ghost">Conheça o projeto</a>
+  <main id="conteudo-principal">
+    <section id="topo" class="relative isolate overflow-hidden bg-charcoal text-white">
+      <div class="absolute inset-0 opacity-60">
+        <img src="assets/hero-principal.jpg" alt="Crianças e adolescentes do Instituto Frutos do Bem em atividade esportiva" class="h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-charcoal/70 mix-blend-multiply"></div>
+      </div>
+      <div class="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-24 lg:flex-row lg:items-center lg:gap-16 lg:py-32">
+        <div class="flex-1">
+          <img src="assets/logo.jpg" alt="Logo Instituto Frutos do Bem" class="mb-8 h-16 w-auto rounded-xl border border-white/20 bg-white/10 p-3 shadow-2xl" />
+          <h1 class="text-4xl font-display font-extrabold leading-tight sm:text-5xl">Transformando e potencializando vidas através do esporte</h1>
+          <p class="mt-6 max-w-xl text-base text-white/85 sm:text-lg">Somos um projeto social esportivo cristão que acolhe crianças, adolescentes e jovens do Serviluz, em Fortaleza/CE, oferecendo modalidades gratuitas e formação integral com princípios de fé, cidadania e amor ao próximo.</p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="https://wa.me/558597410298?text=Quero%20ser%20volunt%C3%A1rio(a)%20no%20Instituto%20Frutos%20do%20Bem" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-mango px-6 py-3 text-sm font-semibold text-charcoal shadow transition hover:translate-y-0.5 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Seja voluntário(a)</a>
+            <a href="https://wa.me/558597410298?text=Quero%20apoiar%20com%20uma%20doa%C3%A7%C3%A3o" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Doe agora</a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
+            <img src="assets/hero-principal.jpg" alt="Atividade esportiva do Instituto Frutos do Bem" class="aspect-[4/3] w-full object-cover" />
+            <img src="assets/simbolo.svg" alt="Símbolo do Instituto Frutos do Bem" class="absolute -bottom-6 -left-6 h-20 w-20 opacity-80" />
+          </div>
         </div>
       </div>
-      <div class="relative">
-        <img src="assets/hero.jpg" alt="Aulas e treinos do Instituto Frutos do Bem" class="rounded-2xl ring-1 ring-white/10 shadow-2xl w-full object-cover aspect-[4/3]" />
-        <img src="assets/simbolo.svg" alt="" class="absolute -bottom-6 -left-6 h-16 opacity-80" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Quem somos -->
-  <section id="quem-somos" class="mx-auto container px-4 py-16 lg:py-20">
-    <div class="grid lg:grid-cols-12 gap-10">
-      <div class="lg:col-span-7">
-        <h2 class="font-display text-3xl font-extrabold">Quem somos</h2>
-        <p class="mt-4">Iniciamos em 5 de abril de 2022 com o desejo de promover mudança de vida pós-pandemia. Hoje atendemos cerca de <b>300 crianças, adolescentes e jovens</b> com <b>futebol, balé, handebol e karatê</b>, unindo técnica, ludicidade e princípios cristãos.</p>
-        <p class="mt-4">Plantamos, cultivamos e colhemos <b>Frutos do Bem</b>: saúde, disciplina, trabalho em equipe, liderança e valores para a vida.</p>
-      </div>
-      <div class="lg:col-span-5">
-        <div class="grid grid-cols-2 gap-3">
-          <img src="assets/gs1.jpg" alt="Treino de futebol" class="rounded-xl aspect-[4/3] object-cover" />
-          <img src="assets/gs2.jpg" alt="Aula de balé" class="rounded-xl aspect-[4/3] object-cover" />
-          <img src="assets/gs3.jpg" alt="Handebol" class="rounded-xl aspect-[4/3] object-cover" />
-          <img src="assets/gs4.jpg" alt="Karatê" class="rounded-xl aspect-[4/3] object-cover" />
+    <section id="quem-somos" class="mx-auto w-full max-w-6xl px-4 py-16 lg:py-20">
+      <div class="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-teal">Quem somos</p>
+          <h2 class="mt-4 text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Plantamos sementes de futuro no Serviluz</h2>
+          <p class="mt-6 text-base text-charcoal/85">Nasceu em 5 de abril de 2022 o Instituto Frutos do Bem, sonho do nosso presidente Papito para recuperar a alegria das crianças da comunidade após a pandemia. Em poucos meses inauguramos a modalidade de futebol com 100 inscritos e hoje atendemos cerca de 300 crianças, adolescentes e jovens.</p>
+          <p class="mt-4 text-base text-charcoal/85">Acreditamos que esporte, fé e família transformam histórias. Cada treino reúne técnica, ludicidade, rodas de conversa e princípios cristãos que desenvolvem atletas e cidadãos para os campos e para a vida.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <img src="assets/qs-futebol.jpg" alt="Turma de futebol do Instituto Frutos do Bem" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm" />
+          <img src="assets/qs-bale.jpg" alt="Crianças em aula de balé do Instituto" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm" />
+          <img src="assets/qs-handebol.jpg" alt="Jovens jogando handebol" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm" />
+          <img src="assets/qs-karate.jpg" alt="Alunos praticando karatê" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-sm" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Missão, Visão, Valores -->
-  <section id="mis-vis-val" class="bg-neutral-50">
-    <div class="mx-auto container px-4 py-16 lg:py-20">
-      <h2 class="font-display text-3xl font-extrabold mb-8">Missão, Visão &amp; Valores</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-          <h3 class="font-display text-xl font-bold">Missão</h3>
-          <p class="mt-2">Transformar e potencializar vidas por meio do esporte e de princípios cristãos.</p>
-        </div>
-        <div class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-          <h3 class="font-display text-xl font-bold">Visão</h3>
-          <p class="mt-2">Ser reconhecido pela excelência esportiva e formação integral de crianças e jovens.</p>
-        </div>
-        <div class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-          <h3 class="font-display text-xl font-bold">Valores</h3>
-          <ul class="mt-2 space-y-1 list-disc ps-5">
-            <li>Princípios cristãos &amp; família</li>
-            <li>Amor em servir &amp; generosidade</li>
-            <li>Impacto social &amp; colaboração</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modalidades -->
-  <section id="modalidades" class="mx-auto container px-4 py-16 lg:py-20">
-    <h2 class="font-display text-3xl font-extrabold mb-8">Modalidades</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="rounded-2xl p-6 ring-1 ring-neutral-200">
-        <span class="inline-block rounded-full bg-teal/15 text-teal px-3 py-1 text-sm font-medium">Futebol</span>
-        <p class="mt-3 text-sm">Aulas de 5–17 anos; torneios, clínicas e peneiras.</p>
-      </div>
-      <div class="rounded-2xl p-6 ring-1 ring-neutral-200">
-        <span class="inline-block rounded-full bg-sage/20 text-deep px-3 py-1 text-sm font-medium">Balé</span>
-        <p class="mt-3 text-sm">Expressão, socialização e bem-estar físico e mental.</p>
-      </div>
-      <div class="rounded-2xl p-6 ring-1 ring-neutral-200">
-        <span class="inline-block rounded-full bg-olive/20 text-deep px-3 py-1 text-sm font-medium">Handebol</span>
-        <p class="mt-3 text-sm">Iniciação lúdica com jogos com e sem bola (6–17).</p>
-      </div>
-      <div class="rounded-2xl p-6 ring-1 ring-neutral-200">
-        <span class="inline-block rounded-full bg-terra/20 text-deep px-3 py-1 text-sm font-medium">Karatê</span>
-        <p class="mt-3 text-sm">Disciplina, autocontrole, respeito e confiança.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Fundador -->
-  <section id="fundador" class="bg-neutral-50">
-    <div class="mx-auto container px-4 py-16 lg:py-20 grid md:grid-cols-2 gap-10 items-center">
-      <img src="assets/papito.jpg" alt="Carlos Edson (Papito), fundador do Instituto" class="rounded-2xl aspect-[4/3] object-cover ring-1 ring-neutral-200" />
-      <div>
-        <h2 class="font-display text-3xl font-extrabold">Fundador</h2>
-        <p class="mt-3"><b>Carlos Edson de Oliveira Chumpitaz (Papito)</b> — criado no Serviluz (Fortaleza/CE), encontrou no esporte um caminho de crescimento pessoal e social e hoje lidera o Instituto para multiplicar esses frutos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Equipe & Voluntariado -->
-  <section id="equipe" class="mx-auto container px-4 py-16 lg:py-20">
-    <div class="flex items-end justify-between">
-      <h2 class="font-display text-3xl font-extrabold">Equipe &amp; Voluntariado</h2>
-      <a href="https://wa.me/558597410298" target="_blank" class="btn btn-primary">Quero me voluntariar</a>
-    </div>
-    <p class="mt-3">26 voluntários ativos com alto índice de permanência — porque fazemos juntos.</p>
-    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- Repita os cards com fotos reais -->
-      <img src="assets/equipe1.jpg" alt="Time de voluntários" class="rounded-xl aspect-square object-cover" />
-      <img src="assets/equipe2.jpg" alt="Aulas com crianças" class="rounded-xl aspect-square object-cover" />
-      <img src="assets/equipe3.jpg" alt="Treino em campo" class="rounded-xl aspect-square object-cover" />
-      <img src="assets/equipe4.jpg" alt="Evento do projeto" class="rounded-xl aspect-square object-cover" />
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="bg-charcoal text-white">
-    <div class="mx-auto container px-4 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="font-display text-3xl font-extrabold">Fale com a gente</h2>
-        <ul class="mt-4 space-y-2 text-white/90">
-          <li><b>E-mail:</b> frutosdobem.projeto@gmail.com</li>
-          <li><b>Instagram:</b> <a class="underline hover:opacity-80" href="https://instagram.com/frutosdobem_projeto" target="_blank">@frutosdobem_projeto</a></li>
-          <li><b>WhatsApp:</b> <a class="underline hover:opacity-80" href="https://wa.me/558597410298" target="_blank">(85) 9741-0298</a></li>
-          <li><b>Endereço:</b> Rua Murilo Borges, 375 — Cais do Porto — Fortaleza/CE</li>
-        </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="https://instagram.com/frutosdobem_projeto" target="_blank" class="btn btn-ghost">Instagram</a>
-          <a href="mailto:frutosdobem.projeto@gmail.com" class="btn btn-ghost">E-mail</a>
+    <section id="mis-vis-valores" class="bg-sage/20 py-16 lg:py-20">
+      <div class="mx-auto w-full max-w-6xl px-4">
+        <h2 class="text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Missão, Visão &amp; Valores</h2>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-3xl border border-sage/40 bg-white/80 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <h3 class="text-xl font-display font-bold text-deepgreen">Missão</h3>
+            <p class="mt-3 text-charcoal/85">Transformar e potencializar vidas de crianças e adolescentes por meio do esporte e de princípios cristãos.</p>
+          </article>
+          <article class="rounded-3xl border border-aqua/40 bg-white/80 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <h3 class="text-xl font-display font-bold text-deepgreen">Visão</h3>
+            <p class="mt-3 text-charcoal/85">Ser referência em desenvolvimento integral com excelência esportiva e formação de atletas e cidadãos.</p>
+          </article>
+          <article class="rounded-3xl border border-mango/40 bg-white/80 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <h3 class="text-xl font-display font-bold text-deepgreen">Valores</h3>
+            <ul class="mt-3 space-y-2 text-charcoal/85">
+              <li>Princípios cristãos e família</li>
+              <li>Amor em servir e generosidade</li>
+              <li>Impacto social e colaboração</li>
+            </ul>
+          </article>
         </div>
       </div>
-      <a href="https://maps.google.com/?q=Rua+Murilo+Borges+375+Fortaleza+CE" target="_blank" class="rounded-2xl overflow-hidden ring-1 ring-white/10">
-        <img src="assets/mapa.jpg" alt="Mapa para o endereço do Instituto" class="w-full h-full object-cover aspect-[4/3]" />
-      </a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-neutral-900 text-neutral-200">
-    <div class="mx-auto container px-4 py-8 text-sm flex flex-wrap items-center justify-between gap-3">
-      <div>© <span id="year"></span> Instituto Frutos do Bem</div>
-      <div class="opacity-80">Identidade visual: Montserrat (títulos) · Inter (texto)</div>
+    <section aria-labelledby="proposito" class="mx-auto w-full max-w-6xl px-4 py-16 lg:py-20">
+      <div class="rounded-3xl border border-deepgreen/30 bg-deepgreen text-white shadow-xl">
+        <div class="grid gap-6 p-10 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+          <div>
+            <h2 id="proposito" class="text-3xl font-display font-extrabold">Nosso propósito</h2>
+            <p class="mt-4 text-base text-white/90">Promover mudança de vida na população carente por meio da educação, saúde, inclusão e formação que o esporte proporciona. Fortalecemos vínculos, incentivamos a prática física e desenvolvemos habilidades socioemocionais para um futuro com mais esperança.</p>
+          </div>
+          <div class="rounded-2xl border border-white/20 bg-white/10 p-6 text-sm text-white/80">
+            <p><strong class="font-semibold text-white">Frutos que colhemos:</strong></p>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-mango"></span><span>Saúde integral, disciplina e trabalho em equipe.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-aqua"></span><span>Segurança emocional, liderança e novas perspectivas.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-terracotta"></span><span>Famílias engajadas em rede de fé, amor e serviço.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modalidades" class="bg-white py-16 lg:py-20">
+      <div class="mx-auto w-full max-w-6xl px-4">
+        <h2 class="text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Modalidades esportivas</h2>
+        <p class="mt-4 max-w-3xl text-charcoal/75">Quatro modalidades gratuitas fortalecem corpo, mente e espírito das crianças e adolescentes da comunidade, oferecendo acompanhamento e experiências dentro e fora das quadras.</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="group flex flex-col rounded-3xl border border-teal/30 bg-teal/10 p-6 transition hover:-translate-y-1 hover:border-teal hover:bg-white">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal text-white shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9zm0 2a7 7 0 0 1 5.65 11l-2-2A3.49 3.49 0 0 0 12 7.5V5zm-7 7a7 7 0 0 1 11-5.65l-2 2A3.5 3.5 0 0 0 7.5 12H5zm7 7a7 7 0 0 1-5.65-11l2 2A3.49 3.49 0 0 0 12 16.5V19zm2-2.35V19a7 7 0 0 0 5.65-11l-2 2A3.48 3.48 0 0 1 14 16.65z"/></svg>
+            </div>
+            <h3 class="mt-6 text-lg font-display font-semibold text-charcoal">Futebol</h3>
+            <p class="mt-3 text-sm text-charcoal/80">Aulas para 5 a 17 anos com treinos em campo, society e quadra, participação em torneios, clínicas, peneiras e excursões.</p>
+          </article>
+          <article class="group flex flex-col rounded-3xl border border-sage/40 bg-sage/10 p-6 transition hover:-translate-y-1 hover:border-sage hover:bg-white">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sage text-deepgreen shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5c2-2 4-2 6 0s4 2 6 0v2c0 3-3 5-6 5S7 10 7 7V5zm0 8.5c2 2 4 2 6 0s4-2 6 0V18c0 3-3 5-6 5s-6-2-6-5v-4.5z"/></svg>
+            </div>
+            <h3 class="mt-6 text-lg font-display font-semibold text-charcoal">Balé</h3>
+            <p class="mt-3 text-sm text-charcoal/80">Desenvolve expressão corporal, autoconfiança e socialização, beneficiando corpo e mente com arte e delicadeza.</p>
+          </article>
+          <article class="group flex flex-col rounded-3xl border border-olive/40 bg-olive/10 p-6 transition hover:-translate-y-1 hover:border-olive hover:bg-white">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-olive text-deepgreen shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 1 10 10v10h-2l-2-2-2 2-2-2-2 2-2-2-2 2H2V12A10 10 0 0 1 12 2zm0 2a8 8 0 0 0-8 8v8h4l2-2 2 2 2-2 2 2 2-2 2 2h2v-8a8 8 0 0 0-8-8z"/></svg>
+            </div>
+            <h3 class="mt-6 text-lg font-display font-semibold text-charcoal">Handebol</h3>
+            <p class="mt-3 text-sm text-charcoal/80">Ensina fundamentos de forma lúdica com jogos com e sem bola, estimulando cooperação e agilidade em crianças de 6 a 17 anos.</p>
+          </article>
+          <article class="group flex flex-col rounded-3xl border border-terracotta/40 bg-terracotta/10 p-6 transition hover:-translate-y-1 hover:border-terracotta hover:bg-white">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-terracotta text-white shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12l3 7-9 11L3 10l3-7zm2.47 2L7 9.15 12 18l5-8.85L15.53 5H8.47zM11 6h2v2h-2zm0 3h2v5h-2z"/></svg>
+            </div>
+            <h3 class="mt-6 text-lg font-display font-semibold text-charcoal">Karatê</h3>
+            <p class="mt-3 text-sm text-charcoal/80">Fortalece paciência, disciplina, autocontrole e respeito, formando jovens confiantes e resilientes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fundador" class="bg-sage/20 py-16 lg:py-20">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 lg:flex-row lg:items-center">
+        <div class="lg:w-5/12">
+          <img src="assets/fundador-papito.jpg" alt="Carlos Edson Chumpitaz, o Papito, fundador do Instituto" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg" />
+        </div>
+        <div class="lg:flex-1">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-teal">Fundador</p>
+          <h2 class="mt-4 text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Carlos Edson “Papito”</h2>
+          <p class="mt-6 text-base text-charcoal/85">Criado no Serviluz, Papito encontrou no esporte um caminho de crescimento pessoal e social. Inspirado pelas oportunidades que recebeu, fundou o Instituto Frutos do Bem para multiplicar esperança, fé e novas possibilidades às famílias da comunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="mx-auto w-full max-w-6xl px-4 py-16 lg:py-20">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-teal">Equipe &amp; voluntariado</p>
+          <h2 class="mt-3 text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Somos potentes porque fazemos juntos</h2>
+          <p class="mt-4 max-w-2xl text-base text-charcoal/80">Contamos com 26 voluntários ativos que permanecem conosco por acreditarem no poder do serviço. Reuniões frequentes, autonomia e cuidado mútuo garantem que cada modalidade floresça e que as famílias estejam próximas do Instituto.</p>
+        </div>
+        <div>
+          <a href="https://wa.me/558597410298?text=Quero%20ser%20volunt%C3%A1rio(a)%20no%20Instituto%20Frutos%20do%20Bem" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-mango px-6 py-3 text-sm font-semibold text-charcoal shadow transition hover:translate-y-0.5 hover:brightness-95">Quero me voluntariar</a>
+        </div>
+      </div>
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <img src="assets/team-1.jpg" alt="Time de voluntários do Instituto Frutos do Bem" class="aspect-square w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+        <img src="assets/team-2.jpg" alt="Equipe do Instituto organizando atividades" class="aspect-square w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+        <img src="assets/team-3.jpg" alt="Voluntários celebrando com as crianças" class="aspect-square w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+        <img src="assets/team-4.jpg" alt="Ações sociais e esportivas com a comunidade" class="aspect-square w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+      </div>
+    </section>
+
+    <section id="galeria" class="bg-sage/20 py-16 lg:py-20">
+      <div class="mx-auto w-full max-w-6xl px-4">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-teal">Galeria</p>
+            <h2 class="mt-3 text-3xl font-display font-extrabold text-charcoal sm:text-4xl">Momentos que inspiram</h2>
+            <p class="mt-2 max-w-2xl text-base text-charcoal/75">Treinos, apresentações, ações solidárias e celebrações: cada momento registra a transformação que acontece quando a comunidade se une.</p>
+          </div>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <img src="assets/gallery-1.jpg" alt="Jogo de futebol com jovens atletas do Instituto" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+          <img src="assets/gallery-2.jpg" alt="Evento social do Instituto com famílias" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+          <img src="assets/gallery-3.jpg" alt="Apresentação cultural com crianças" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+          <img src="assets/gallery-4.jpg" alt="Atividade de ginástica artística" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+          <img src="assets/gallery-5.jpg" alt="Treino de karatê" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+          <img src="assets/gallery-6.jpg" alt="Voluntários em roda de conversa" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg transition hover:-translate-y-1" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="relative overflow-hidden bg-charcoal py-16 text-white lg:py-20">
+      <div class="absolute inset-0 opacity-10">
+        <img src="assets/simbolo.svg" alt="" aria-hidden="true" class="h-full w-full object-cover" />
+      </div>
+      <div class="relative mx-auto w-full max-w-6xl px-4">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-aqua">Contato &amp; endereço</p>
+            <h2 class="mt-3 text-3xl font-display font-extrabold text-white sm:text-4xl">Vamos conversar?</h2>
+            <p class="mt-4 max-w-xl text-white/80">Quer ser voluntário(a), doar equipamentos, promover um evento ou conhecer nossas atividades? Estamos prontos para conversar e acolher você.</p>
+            <ul class="mt-6 space-y-3 text-sm text-white/85">
+              <li><span class="font-semibold text-white">E-mail:</span> <a class="underline decoration-mango/60 underline-offset-4 transition hover:text-mango" href="mailto:frutosdobem.projeto@gmail.com">frutosdobem.projeto@gmail.com</a></li>
+              <li><span class="font-semibold text-white">Instagram:</span> <a class="underline decoration-mango/60 underline-offset-4 transition hover:text-mango" href="https://instagram.com/frutosdobem_projeto" target="_blank" rel="noopener">@frutosdobem_projeto</a></li>
+              <li><span class="font-semibold text-white">WhatsApp:</span> <a class="underline decoration-mango/60 underline-offset-4 transition hover:text-mango" href="https://wa.me/558597410298" target="_blank" rel="noopener">(85) 9741-0298</a></li>
+              <li><span class="font-semibold text-white">Endereço:</span> Rua Murilo Borges, 375 — Cais do Porto — Fortaleza/CE</li>
+            </ul>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://wa.me/558597410298" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-mango px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:translate-y-0.5 hover:brightness-95">Chamar no WhatsApp</a>
+              <a href="https://instagram.com/frutosdobem_projeto" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10">Seguir no Instagram</a>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-3xl border border-white/15 shadow-2xl">
+            <iframe title="Mapa com a localização do Instituto Frutos do Bem" src="https://maps.google.com/maps?q=Rua%20Murilo%20Borges%2C%20375%20-%20Cais%20do%20Porto%2C%20Fortaleza%20-%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed" class="h-[320px] w-full" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-charcoal text-white">
+    <div class="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="ano-atual"></span> Instituto Frutos do Bem. Todos os direitos reservados.</p>
+      <div class="flex flex-wrap items-center gap-4 text-white/70">
+        <a href="https://instagram.com/frutosdobem_projeto" target="_blank" rel="noopener" class="transition hover:text-mango">Instagram</a>
+        <a href="https://wa.me/558597410298" target="_blank" rel="noopener" class="transition hover:text-mango">WhatsApp</a>
+        <a href="mailto:frutosdobem.projeto@gmail.com" class="transition hover:text-mango">E-mail</a>
+      </div>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
