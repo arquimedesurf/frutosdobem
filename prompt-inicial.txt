@@ -1,0 +1,72 @@
+Você é um agente de desenvolvimento web full-stack. Gere uma Landing Page moderna, responsiva e acessível para o “Instituto Frutos do Bem”, usando o conteúdo do arquivo `conteudo.md` (derivado do PDF) e do `README.md`, a nova logomarca e as fotos existentes no repositório.
+
+### Identidade Visual (seguir fielmente)
+- Estilo: **minimalista e contemporâneo**; linhas limpas; poucos elementos decorativos.
+- Paleta:
+  - Charcoal (fundo escuro): `#2E2F33`
+  - Branco: `#FFFFFF`
+  - Deep Green (apoio): `#2F5E4E`
+  - Frutos/acentos: Mango `#E0A431`, Teal `#3DAA97`, Olive `#A1B56C`, Sage `#B0C19E`, Terracotta `#B98968`, Aqua `#8DC3B0`
+- Tipografia:
+Tipografia: Títulos Montserrat (700/800); Texto Inter (400/500/600). Carregar via Google Fonts. Aplicar font-family: 'Montserrat' na classe de títulos e 'Inter' no corpo.
+- Logo: usar arquivo logo jpeg do repositório. Símbolo pode ser usado isolado em favicon/og-image. 
+
+### Stack e Estrutura
+- **Sem build complexo**: gerar **site estático** com **HTML + Tailwind CSS** via CDN (ou CSS próprio se preferir).
+- Criar pasta `landing/` com:
+  - `index.html` (melhorar página principal já criada) 
+  - `styles.css` (se usar CSS próprio; opcional com Tailwind)
+  - `assets/` (copiar logo e imagens referenciadas)
+  - `og.jpg` (gerar a partir da hero com a marca)
+  - `favicon.ico` e `favicon.svg` (símbolo da árvore)
+- Você pode varrer o repositório por imagens (ex.: `**/*.(png|jpg|jpeg|svg)`) e escolher as melhores para a hero, galeria e equipe. Copie para `landing/assets/` mantendo nomes legíveis.
+
+### Conteúdo (origem e seções)
+- Ler `conteudo.md` e `README.md`. Converter em blocos claros:
+  1) **Hero**: logo; título “Transformando e potencializando vidas através do esporte”; CTA “Seja voluntário(a)” e “Doe agora”.
+  2) **Quem somos** (resumo).
+  3) **Missão, Visão e Valores** (cards).
+  4) **Propósito** (texto em destaque).
+  5) **Modalidades**: Futebol, Balé, Handebol, Karatê (cards com ícones/ilustrações simples).
+  6) **Fundador** (foto do Papito, se disponível; texto curto).
+  7) **Equipe & Voluntariado** (mosaico de fotos; CTA para formulário/WhatsApp).
+  8) **Galeria** (grid de fotos).
+  9) **Contato & Endereço** (mapa estático ou link para Google Maps).
+  10) **Rodapé** com redes sociais e direitos.
+
+### UX/UI
+- Header sticky com navegação âncora.
+- Hero com fundo Charcoal, texto branco, botão Mango (`#E0A431`) com hover Darken.
+- Micro-animações CSS (transições em hovers, fade-in leve).
+- Espaço de respiro generoso (8/12/16/24/40 px).
+- Área de respiro do logo = pelo menos a **altura do fruto central** ao redor (não encostar bordas).
+
+### Acessibilidade e SEO
+- HTML semântico (header, main, section, nav, footer, h1–h3).
+- Contraste AA; `alt` descritivo nas imagens.
+- Metatags: title, description, OG e Twitter Card usando `og.jpg`.
+- Sitemap simples (`sitemap.xml`) e `robots.txt`.
+
+### Comandos/Passos que você deve executar
+1. Criar a pasta `landing/` e arquivos básicos (`index.html`, `styles.css` se houver).
+2. Detectar e copiar a logo e fotos relevantes para `landing/assets/`.
+3. Inserir fontes via Google Fonts (`Poppins`, `Inter`) com fallback.
+4. Montar todas as seções usando conteúdo de `conteudo.md`/`README.md`.
+5. Gerar `og.jpg` a partir da hero (pode exportar um frame HTML para imagem simples ou usar imagem presente).
+6. Criar `favicon.svg` usando o símbolo da árvore; converter para `favicon.ico` (32px) se possível; senão manter svg/png.
+7. Criar `robots.txt` e `sitemap.xml` mínimos.
+8. Validar acessibilidade básica (labels e headings em ordem).
+9. Salvar e commitar: `feat(landing): landing page do Instituto Frutos do Bem`.
+
+### Aceite / Critérios de pronto
+- Página renderiza sem build (abrindo `landing/index.html`).
+- Responsiva (mobile-first) e acessível (alt nos elementos visuais).
+- Identidade visual aplicada (cores/gradientes dos frutos como acentos).
+- CTAs funcionais (links para WhatsApp/Instagram/Email do projeto).
+- Sem dependências externas além das fontes e, opcionalmente, Tailwind via CDN.
+
+### Observações
+- Se não encontrar fotos, criar placeholders com caixas nas cores da paleta e textos “Foto do Projeto/Equipe”.
+- Não distorcer a marca; manter proporções e espaçamento.
+
+Agora, execute os passos acima no repositório atual e apresente os arquivos criados.
