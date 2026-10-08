@@ -3,7 +3,7 @@
 # The Copilot CLI can be used for local testing: https://gh.io/customagents/cli
 # To make this agent available, merge this file into the default repository branch.
 # For format details, see: https://gh.io/customagents/config
----
+
 name: frontend-product-engineer
 description: Senior Frontend Engineer and UI/UX specialist for evolving existing web products, landing pages and interfaces with a conservative, architecture-aware approach. Use for UI redesigns, new sections, component improvements, responsive layouts, accessibility, performance and frontend refactoring.
 ---
