@@ -83,4 +83,4 @@ No Frutos do Bem, **voluntariado é coisa séria**! Contamos com **26 voluntári
 - **E-mail:** frutosdobem.projeto@gmail.com  
 - **Instagram:** [@frutosdobem_projeto](https://instagram.com/frutosdobem_projeto)
 - **Endereço:** Rua Murilo Borges, 375 — Cais do Porto — Fortaleza/CE
-- **Telefone/WhatsApp:** (85) 9 741-0298
+- **Telefone/WhatsApp:** (85) 99228-2718
